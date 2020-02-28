@@ -3,7 +3,7 @@
     "displayName": "OxyScript Language Support",
     "description": "Provides syntax highlighting for the OxyScript scripting language",
     "publisher": "wrckn",
-    "version": "0.1.0",
+    "version": "0.1.2",
     "repository": "https://github.com/wrckn/vscode-oxs-syntax",
     "engines": {
         "vscode": "^1.41.0"
@@ -14,12 +14,12 @@
     "contributes": {
         "languages": [{
             "id": "oxy-script",
-            "aliases": ["oxyscript", "oxy_script"],
+            "aliases": ["OxyScript", "oxyscript", "oxy_script"],
             "extensions": [".oxs"],
             "configuration": "./language-configuration.json"
         }],
         "grammars": [{
-            "language": "OxyScript",
+            "language": "oxy-script",
             "scopeName": "source.oxs",
             "path": "./syntaxes/oxy-script.tmLanguage.json"
         }]
