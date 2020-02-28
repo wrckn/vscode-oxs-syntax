@@ -1,0 +1,79 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "oxy-script",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#constants"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.oxy-script",
+					"match": "\\b(if|while|for|return|break|continue|loop|else)\\b"
+				},
+				{
+					"name": "keyword.decl.oxy-script",
+					"match": "\\b(import|fn|mod|cont|impl|intf|pub|static|var)\\b"
+				},
+				{
+					"name": "keyword.other.oxy-script",
+					"match": "\\b(int|string|float|bool|this)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.oxy-script",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.oxy-script",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.double-slash.oxy-script",
+					"begin": "//",
+					"end": "\n"
+				},
+				{
+					"name": "comment.line.number-sign.oxy-script",
+					"begin": "#",
+					"end": "\n"
+				},
+				{
+					"name": "comment.multi-line.oxy-script",
+					"begin": "/\\*",
+					"end": "\\*/"
+				}
+			]
+		},
+		"constants": {
+			"patterns": [
+				{
+					"name": "constant.numeric.oxy-script",
+					"match": "[0-9]"
+				},
+				{
+					"name": "constant.character.oxy-script",
+					"match": "\\b({|}|(|)|,|[|]|~|;|..|.|:|::|<|>|=|==|\\+=|-=|\\*=|/=|!=|<=|>=|!|&|~)\\b“"
+				}
+			]
+		}
+	},
+	"scopeName": "source.pgs"
+}
